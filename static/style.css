@@ -1,0 +1,21 @@
+body{
+    background: #f8f8f8 !important;
+}
+
+.nav{
+    border-radius: 0 !important;
+    padding: 10px 0 10px 0;
+    background-color: #7d8fc5 !important;
+}
+
+.mb-7{
+    margin-bottom: 7px !important;
+}
+
+.w-big{
+    width : 200px !important;
+}
+
+.mb-5{
+    margin-bottom: 5px !important;
+}

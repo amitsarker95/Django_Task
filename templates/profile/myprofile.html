@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}
+Profile
+{% endblock title %}
+
+{% block content %}
+
+<h1>MY Profile : {{profiles}}</h1>
+<hr>
+<img src="{{profiles.images.url}}" alt="">
+
+<div class="ten wide column">
+    <table>
+        <tbody>
+        <tr>
+            <td>username : </td>
+            <td>{{profiles.user}}</td>
+        </tr>
+        <tr>
+            <td>first name : </td>
+            <td>{{profiles.fast_name}}</td>
+        </tr>
+        <tr>
+            <td>last name : </td>
+            <td>{{profiles.last_name}}</td>
+        </tr>
+        <tr>
+            <td>country : </td>
+            <td>{{profiles.country}}</td>
+        </tr>
+        <tr>
+            <td>email : </td>
+            <td>{{profiles.email}}</td>
+        </tr>
+        <tr>
+            <td>friends:</td>
+            <td>
+                <ul></ul>
+                {% for friend in profiles.get_friends %}
+                <li>{{friend}}</li>
+                {% endfor %}
+            </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>total Friends : </td>
+            <td>{{profiles.get_total_friends}}</td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+
+{% endblock content %}
+

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+invites friends
+{% endblock title %}
+
+{% block content %}
+<h1>All Profiles</h1>
+<ul>
+    {% for items in qs %}
+    <li>{{items}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
